@@ -37,6 +37,6 @@ mean of neutral score = 0.8114122994652406
 
 This has dispoven my initial hypothesis, as clearly the top posts are overwhelming neutral. This initially took me by surprise. However, upon further examination, this makes a lot of sense since polarizing topics may recieve more downvotes which counts as a -1 on the score.
 
-## Normalizing the Scores
+### Normalizing the Scores
 
 Subreddits vary quite heavily in terms of the amount of active users it has. Some subreddits (ie. askReddit) are a lot more popular than others. As a result, simply posting on those popular subreddits may give more upvotes, but relatively speaking they may not be as popular as something else with less upvotes in a smaller subreddit. In order to account for this, some normalization needs to be done to the scores. Therefore, I replaced the score metric with what oercentile that score is in within its subreddit.
