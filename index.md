@@ -23,4 +23,6 @@ The data I used for both the posts and comments is the provided Text database. D
 
 ![image](https://user-images.githubusercontent.com/40770286/144957483-55c40a80-e1eb-41d0-be3d-42db37516010.png)
 
-We can clearly see that the top posts and comments are not really affected by the day of week in which they were posted (as the counts are relatively similar), however, the time of day in which you post has a clearly defined pattern which indicates that top posts in subreddits are more likely to be posted during day time in the eastern timezone. This also indicates that a lot of reddit's users are in the western hemisphere.
+We can clearly see that the top posts and comments are not really affected by the day of week in which they were posted (as the counts are relatively similar), however, the time of day in which you post has a clearly defined pattern which indicates that top posts in subreddits are more likely to be posted during day time in the eastern timezone. This also indicates that a lot of reddit's users are in the western hemisphere. Since there is nearly an even split among the top posts and comments about the day of week in which it was posted, I had removed it as a feature. I had also removed all user information as that is unlikely to affect whether or not someone upvotes or downvotes. Finally, I had combined all the text and used CountVectorizer to find the counts of the top 2000 words as I will be using the bag of words technique for my models.
+
+### Sentiment Analysis
