@@ -45,4 +45,43 @@ Subreddits vary quite heavily in terms of the amount of active users it has. Som
 
 In this project I have used 3 classification models to try and classify whether or not a post or comment will be popular. In order to do this we much have some definition of "popular". For the purposes of this research project, I had defined being popular as being over the 50th percentile (ie. that post is greater than 50% of other posts in the same subreddit), and unpopular as being under the 50th percentile.
 
+I also applied PCA to be able to visualize how the posts and comments look on the 2D level and whther or not there exists some visible pattern. These graphs were done using plotly and is therefore an interactive plot which is better to explore the data than a static graph. 
+
+For posts:
+
+<img width="994" alt="Screen Shot 2021-12-06 at 10 44 23 PM" src="https://user-images.githubusercontent.com/40770286/144962626-a4f36184-29d4-40e9-a518-af5973320426.png">
+
+For comments:
+
+<img width="956" alt="Screen Shot 2021-12-06 at 10 48 45 PM" src="https://user-images.githubusercontent.com/40770286/144962776-1c4e469d-98d7-4fba-b1a0-95e1f7354c5f.png">
+
+The yellow points are of popular posts and comments while the blue are of the unpopular. Notice, the points are very close together and there is no observable pattern.
+
 #### Logistic Regression
+
+This is the first of the 3 models I had implemented. I had utilized all of the features gathered in the data preprocessing as well as the sentiment scores for around 64 000 posts and 64 000 comments. As seen below, the training error was imporoving as the number of features increased, however, the test dataset resulted in poor results for any number of features. Having a 56% error is really bad because there are 2 classifiers so even by just guessing there is a 50% chance you'd get the classificaation correctly. Thus, this model is not extendable to outside the training set. This is likely due to overfitting or poor feature selection, which are both addressed in the next 2 classifiers. However, the fact that logisic regression did not fit well means that, geometrically, there is no linear boundary between the classes.
+
+Model error graph for posts:
+
+![image](https://user-images.githubusercontent.com/40770286/144964075-c21ada0a-f53d-43e7-9330-0c93d42b2387.png)
+
+Model error graph for comments:
+
+![image](https://user-images.githubusercontent.com/40770286/144964108-39eee839-3c1a-4362-ad9d-15fd329f5c32.png)
+
+#### Random Forest
+
+This is the next model I had implemented. After having seen that logistic regression simply did not work, I had thought it may have been an issue with feature selection. Hence, I decided to use the random forest classifier which is quite resistant to bad feature choices since if a feature does not have enough variance, the tree would simply not use it as a condition to make a split. However, much to my suprise, while the training error was steadily decreasing the testing error remained the same, which is a good indication of overfitting.
+
+
+Model error graph for posts:
+
+![image](https://user-images.githubusercontent.com/40770286/144964686-dea5c1b3-b2e1-41c4-a776-df91ea03da48.png)
+
+Model error graph for comments:
+
+![image](https://user-images.githubusercontent.com/40770286/144964701-acfe478e-c87d-4166-8201-a1b9330e7b57.png)
+
+#### Naive Bayes
+
+The final classsification model I decided to use was Nai
