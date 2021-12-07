@@ -1,5 +1,12 @@
 # Predicting Popularity of Reddit Posts
 
-## Abstract
+In a society where the success of advertisements is determined by the amount of interaction that a post generates, it is very important to understand when and where to post or comment in order to garner the most interactions. Reddit is a social media site with a huge user base that is constantly posting and commenting. Within this social media site, users have the option of "upvoting" or "downvoting" posts and comments which, in turn, determines the score of that particular post or comment. In this research project, I hope to use data science and machine learning methods to try and understand what factors make a reddit post or comment popular or if it is even possible to do so. I hope to explore how straightforward factors like time and date of posting, but also more complicated factors like sentiment and content affect the popularity of a post. The implications of finding factors that affect reddit post popularity would include being able to optimize pthe posting of posts and comments to garner the most attention as well as getting a window into the human mind to see what may grab their attention.
 
-In a society where the success of advertisements is determined by the amount of interaction that a post generates, it is very important to understand when and where to post or comment in order to garner the most interactions. We’re measuring the number of interactions in a post by its score. The goal of this project is to use various features/factors about the post or comment to determine the score that it may generate. We would like to understand what factors lead to having a popular post/comment as opposed to one that is not as popular. Moreover, we’d like to use these factors to also be able to predict the score of posts and comments. Overall, we would like to get a better understanding of user behaviour on reddit when it comes to upvoting various different comments and posts.
+Some Research questions I hoope to answer are:
+
+- How can one optimize their comment in order to receive a maximal score? (Main Question)
+- When is the best time to post a comment or post?
+- How does the tone of the comment (ie. whether it is positive or negative) affect comments?
+- Is it possible to determine the popularity of a post by it's content?
+
+
