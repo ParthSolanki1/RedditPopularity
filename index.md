@@ -84,4 +84,6 @@ Model error graph for comments:
 
 #### Naive Bayes
 
-The final classsification model I decided to use was Nai
+The final classsification model I decided to use was Naive Bayes since it is fairly resistant to overfitting. However, doing the naive bayes resulted in an equally bad training and testing error of nearkly 52% for both posts and comments. This shows that the data points don't have a circular geometric relationship.
+
+## Conclusion
