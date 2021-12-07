@@ -30,5 +30,13 @@ We can clearly see that the top posts and comments are not really affected by th
 Whenever there are viral moments on the internet it is very apparent that they are usually overwelhmingly positive or negative, as it is likely that polarizing topics may make each side defensive which leads to more interactions. This is an hypothesis I had made prior to this project. In order to test this, I had decided to use sentiment analysis techniques on the top posts from each subreddit. I used nltk library's SentimentIntensityAnalyzer with it's built in Vader lexicon on the top 10 posts and comments from each subreddit. I then took the mean of it's positive, negative, and neutral score and saw the following results:
 
 mean of positive score = 0.11451042780748663
+
 mean of negative score = 0.07247005347593583
+
 mean of neutral score = 0.8114122994652406
+
+This has dispoven my initial hypothesis, as clearly the top posts are overwhelming neutral. This initially took me by surprise. However, upon further examination, this makes a lot of sense since polarizing topics may recieve more downvotes which counts as a -1 on the score.
+
+## Normalizing the Scores
+
+Subreddits vary quite heavily in terms of the amount of active users it has. Some subreddits (ie. askReddit) are a lot more popular than others. As a result, simply posting on those popular subreddits may give more upvotes, but relatively speaking they may not be as popular as something else with less upvotes in a smaller subreddit. In order to account for this, some normalization needs to be done to the scores. Therefore, I replaced the score metric with what oercentile that score is in within its subreddit.
