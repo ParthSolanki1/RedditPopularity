@@ -87,3 +87,9 @@ Model error graph for comments:
 The final classsification model I decided to use was Naive Bayes since it is fairly resistant to overfitting. However, doing the naive bayes resulted in an equally bad training and testing error of nearkly 52% for both posts and comments. This shows that the data points don't have a circular geometric relationship.
 
 ## Conclusion
+
+The fact that none of the classification models were even close to providing an accurate enough model means there must be some aspect of the data that is not being captured. I believe the missing aspect is context. Most of the time, subreddits are specific to certain topics and are very reactionary to whatever happened related to the topic of the subreddit. For example, if a new episode of Game of Thrones comes out, the only posts that would get upvotes would be related to the current episode and not of the previous ones. It is nearly impossible to capture this sort of relationships using the methods we have learned so far.
+
+However, there was still a lot of valuable insights to be taken away including the fact that posting in the daytime makes a post or comment more likely to be popular, and that most popular posts are usually neutral. Also, I had noticed that comments and post had nearly all the same properties, meaning that if there is a method to predicting popularity of posts, it would also work for comments and vice versa.
+
+Overall, I have learned that predicting popularity of posts on reddit is not as simple as using the word counts and meta data. There is a lot of contexual information that must also be present.
