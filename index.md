@@ -26,3 +26,9 @@ The data I used for both the posts and comments is the provided Text database. D
 We can clearly see that the top posts and comments are not really affected by the day of week in which they were posted (as the counts are relatively similar), however, the time of day in which you post has a clearly defined pattern which indicates that top posts in subreddits are more likely to be posted during day time in the eastern timezone. This also indicates that a lot of reddit's users are in the western hemisphere. Since there is nearly an even split among the top posts and comments about the day of week in which it was posted, I had removed it as a feature. I had also removed all user information as that is unlikely to affect whether or not someone upvotes or downvotes. Finally, I had combined all the text and used CountVectorizer to find the counts of the top 2000 words as I will be using the bag of words technique for my models.
 
 ### Sentiment Analysis
+
+Whenever there are viral moments on the internet it is very apparent that they are usually overwelhmingly positive or negative, as it is likely that polarizing topics may make each side defensive which leads to more interactions. This is an hypothesis I had made prior to this project. In order to test this, I had decided to use sentiment analysis techniques on the top posts from each subreddit. I used nltk library's SentimentIntensityAnalyzer with it's built in Vader lexicon on the top 10 posts and comments from each subreddit. I then took the mean of it's positive, negative, and neutral score and saw the following results:
+
+mean of positive score = 0.11451042780748663
+mean of negative score = 0.07247005347593583
+mean of neutral score = 0.8114122994652406
