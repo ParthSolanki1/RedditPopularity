@@ -40,3 +40,9 @@ This has dispoven my initial hypothesis, as clearly the top posts are overwhelmi
 ### Normalizing the Scores
 
 Subreddits vary quite heavily in terms of the amount of active users it has. Some subreddits (ie. askReddit) are a lot more popular than others. As a result, simply posting on those popular subreddits may give more upvotes, but relatively speaking they may not be as popular as something else with less upvotes in a smaller subreddit. In order to account for this, some normalization needs to be done to the scores. Therefore, I replaced the score metric with what oercentile that score is in within its subreddit.
+
+### Models
+
+In this project I have used 3 classification models to try and classify whether or not a post or comment will be popular. In order to do this we much have some definition of "popular". For the purposes of this research project, I had defined being popular as being over the 50th percentile (ie. that post is greater than 50% of other posts in the same subreddit), and unpopular as being under the 50th percentile.
+
+#### Logistic Regression
